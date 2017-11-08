@@ -1,13 +1,11 @@
 import React, { PureComponent } from 'react'
+import Board from './Board'
+import FlatButton from 'material-ui/FlatButton'
 
-class Square extends PureComponent {
-  render() {
-    return (
-      <button className="square">
-        {this.props.value}
-      </button>
-    );
-  }
+function Square(props) {
+  return (
+    <FlatButton className="square" onClick={props.onClick} label={props.value} />
+  );
 }
 
 export default Square
