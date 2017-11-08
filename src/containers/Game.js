@@ -5,6 +5,7 @@ import { fetchOneGame, fetchPlayers } from '../actions/games/fetch'
 import { connect as subscribeToWebsocket } from '../actions/websocket'
 import JoinGameDialog from '../components/games/JoinGameDialog'
 import GameTTT from '../components/TicTacToe/GameTTT'
+import './Game.css'
 
 const playerShape = PropTypes.shape({
   userId: PropTypes.string.isRequired,
@@ -60,7 +61,7 @@ class Game extends PureComponent {
 
     return (
       <div className="Game">
-        <h1>Game!</h1>
+        <h1>TIC TAC TOE</h1>
         <p>{title}</p>
 
         <GameTTT />
