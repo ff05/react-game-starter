@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
+import {connect} from 'react-redux'
 import Square from './Square'
 import { calculateWinner } from '../../containers/Game'
+import { updating } from '../../actions/games/subscribe'
 
 class Board extends PureComponent {
   constructor() {
@@ -12,7 +14,8 @@ class Board extends PureComponent {
   }
 
   handleClick(i) {
-    const squares = this.state.squares.slice();
+    this.props.updating(this.props.game)
+    const squares = this.props.board.slice();
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
@@ -26,7 +29,7 @@ class Board extends PureComponent {
   renderSquare(i) {
     return (
       <Square
-        value={this.state.squares[i]}
+        value={this.props.board[i]}
         onClick={() => this.handleClick(i)}
       />
     );
@@ -65,4 +68,4 @@ class Board extends PureComponent {
 }
 
 
-  export default Board
+export default connect(null, { updating })(Board)
