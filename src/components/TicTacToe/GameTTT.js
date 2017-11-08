@@ -10,11 +10,13 @@ class GameTTT extends PureComponent {
         </div>
         <div className="game-info">
           <div>{/* status */}</div>
-          <ol>{/* ... */}</ol>
+          <ol>{/* TODO */}</ol>
         </div>
       </div>
     );
   }
 }
+
+
 
 export default GameTTT
