@@ -7,7 +7,6 @@ import JoinGameDialog from '../components/games/JoinGameDialog'
 
 const playerShape = PropTypes.shape({
   userId: PropTypes.string.isRequired,
-  pairs: PropTypes.arrayOf(PropTypes.string).isRequired,
   name: PropTypes.string
 })
 
@@ -25,12 +24,7 @@ class Game extends PureComponent {
       createdAt: PropTypes.string.isRequired,
       started: PropTypes.bool,
       turn: PropTypes.number.isRequired,
-      cards: PropTypes.arrayOf(PropTypes.shape({
-        symbol: PropTypes.string,
-        _id: PropTypes.string,
-        won: PropTypes.bool,
-        visible: PropTypes.bool
-      }))
+      board: PropTypes.array
     }),
     currentPlayer: playerShape,
     isPlayer: PropTypes.bool,
