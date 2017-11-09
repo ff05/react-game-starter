@@ -29,7 +29,6 @@ export default (state = [], { type, payload } = {}) => {
       return [newGame].concat(state)
 
     case GAME_UPDATED :
-    console.log(payload)
       return state.map((game) => {
         if (game._id === payload._id) {
           return { ...payload }

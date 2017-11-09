@@ -13,12 +13,11 @@ export const GAME_PLAYERS_UPDATED = 'GAME_PLAYERS_UPDATED'
 
 const api = new API()
 
-export const updating = (game) => {
-  console.log(game._id)
+export const updating = (game_id, player_id, move) => {
   return (dispatch) => {
     dispatch({ type: APP_LOADING })
 
-    api.patch(`/games/${game._id}`, [1])
+    api.patch(`/games/${game_id}`, {player_id, move})
       .then(() => {
         dispatch({ type: APP_DONE_LOADING })
         dispatch({ type: LOAD_SUCCESS })
