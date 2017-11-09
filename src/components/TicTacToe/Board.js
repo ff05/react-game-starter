@@ -14,7 +14,7 @@ class Board extends PureComponent {
   }
 
   handleClick(i) {
-    this.props.updating(this.props.game)
+    this.props.updating(this.props.game._id, this.props.player, i)
     const squares = this.props.board.slice();
     if (calculateWinner(squares) || squares[i]) {
       return;
