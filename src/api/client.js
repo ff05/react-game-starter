@@ -11,6 +11,7 @@ export default class ApiClient {
      this.host = process.env.NODE_ENV === 'production'
        ? 'https://git@deis-builder.codaisseur.cloud:2222/tender-yardwork.git' // WITHOUT the / !!!
        : (host || 'http://localhost:3030')
+     }
 
   // Authenticate and store the token
   //
