@@ -35,6 +35,7 @@ class Navigation extends PureComponent {
     const { signedIn } = this.props
     return (
       <AppBar
+        className="navigation"
         title={TITLE}
         iconElementLeft={<IconButton onClick={this.goHome}><GameIcon /></IconButton>}
         iconElementRight={signedIn ?

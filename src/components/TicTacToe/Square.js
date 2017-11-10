@@ -7,10 +7,9 @@ function Square(props) {
   return (
 
     <FlatButton className="square" onClick={props.onClick} label=" " >
-      {props.value}
+      <span>{props.value}</span>
     </FlatButton>
   );
 }
 
 export default Square
-  

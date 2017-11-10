@@ -5,6 +5,10 @@
 
 .square {
   box-shadow: 3px 3px 3px #888888;
-  height: 80px!important;
-  width: 80px!important;
+  height: 100px!important;
+  width: 100px!important;
+}
+
+.status {
+  margin-bottom: 20px;
 }
