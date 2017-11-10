@@ -14,7 +14,10 @@ class Board extends PureComponent {
   }
 
   handleClick(i) {
-    this.props.updating(this.props.game._id, this.props.player, i)
+    if (this.props.hasTurn) {
+      this.props.updating(this.props.game._id, this.props.player, i)
+    }
+
     const squares = this.props.board.slice();
     if (calculateWinner(squares) || squares[i]) {
       return;
@@ -36,9 +39,10 @@ class Board extends PureComponent {
   }
 
   render() {
-    const winner = calculateWinner(this.state.squares);
+    const winnerId = this.props.game.winnerId
+    const winner = this.props.game.players.filter(p => ( p.userId === winnerId ))[0].name
     let status;
-    if (winner) {
+    if (winner != undefined && winner != null) {
       status = 'Winner: ' + winner;
     } else {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
