@@ -85,7 +85,7 @@ class Game extends PureComponent {
         <h1>TIC TAC TOE</h1>
         <p>{title}</p>
 
-        <GameTTT board={game.board} game={game} player={this.props.currentUser._id}/>
+        <GameTTT board={game.board} game={game} player={this.props.currentUser._id} hasTurn={this.props.hasTurn}/>
 
         <h2>Debug Props</h2>
         <pre>{JSON.stringify(this.props, true, 2)}</pre>

@@ -6,7 +6,7 @@ class GameTTT extends PureComponent {
     return (
       <div className="game">
         <div className="game-board">
-          <Board board={this.props.board} game={this.props.game} player={this.props.player}/>
+          <Board board={this.props.board} game={this.props.game} player={this.props.player} hasTurn={this.props.hasTurn}/>
         </div>
         <div className="game-info">
           <div>{/* status */}</div>
