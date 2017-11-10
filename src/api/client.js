@@ -8,9 +8,9 @@ export default class ApiClient {
   }
 
   constructor(host, options = {}) {
-    this.host = host || process.env.API_URL || 'http://localhost:3030'
-    this.options = { ...this.defaultOptions, ...options }
-  }
+     this.host = process.env.NODE_ENV === 'production'
+       ? 'https://taller-huntress.codaisseur.cloud' // WITHOUT the / !!!
+       : (host || 'http://localhost:3030')
 
   // Authenticate and store the token
   //
