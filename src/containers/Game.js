@@ -85,7 +85,7 @@ class Game extends PureComponent {
         <h1>TIC TAC TOE</h1>
         <p>{title}</p>
 
-        <GameTTT board={game.board} game={game} player={this.props.currentPlayer.userId}/>
+        <GameTTT board={game.board} game={game} player={this.props.currentUser._id}/>
 
         <h2>Debug Props</h2>
         <pre>{JSON.stringify(this.props, true, 2)}</pre>
@@ -101,6 +101,7 @@ const mapStateToProps = ({ currentUser, games }, { match }) => {
   const currentPlayer = game && game.players.filter((p) => (p.userId === currentUser._id))[0]
   const hasTurn = !!currentPlayer && game.players[game.turn].userId === currentUser._id
   return {
+    currentUser,
     currentPlayer,
     game,
     isPlayer: !!currentPlayer,
