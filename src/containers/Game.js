@@ -87,6 +87,10 @@ class Game extends PureComponent {
 
         <GameTTT board={game.board} game={game} player={this.props.currentUser._id} hasTurn={this.props.hasTurn}/>
 
+        <h2>Debug Props</h2>
+        <pre>{JSON.stringify(this.props, true, 2)}</pre>
+
+        <JoinGameDialog gameId={game._id} />
       </div>
     )
   }

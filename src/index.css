@@ -6,23 +6,3 @@ body {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   background-color: #f6f6f6;
 }
-
-.navigation {
-  background-color: #0065dd!important;
-}
-
-.Game p {
-  font-size: 24px;
-}
-
-.status {
-  font-size: 24px;
-  color: #f00;
-}
-
-.square > div > span + span { display: none }
-
-.square > div > span {
-  font-size: 30px;
-  font-weight: bold;
-}
