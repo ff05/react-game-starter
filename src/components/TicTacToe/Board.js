@@ -41,12 +41,14 @@ class Board extends PureComponent {
   render() {
     const winnerId = this.props.game.winnerId
     const winner = this.props.game.players.filter(p => ( p.userId === winnerId ))[0].name
+
     let status;
     if (winner != undefined && winner != null) {
       status = 'Winner: ' + winner;
     } else {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
+
 
     return (
       <div>
