@@ -9,7 +9,7 @@ export default class ApiClient {
 
   constructor(host, options = {}) {
      this.host = process.env.NODE_ENV === 'production'
-       ? 'https://taller-huntress.codaisseur.cloud' // WITHOUT the / !!!
+       ? 'https://tender-yardwork.codaisseur.cloud' // WITHOUT the / !!!
        : (host || 'http://localhost:3030')
 
   // Authenticate and store the token
