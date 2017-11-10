@@ -17,6 +17,4 @@ class GameTTT extends PureComponent {
   }
 }
 
-
-
 export default GameTTT
