@@ -19,8 +19,8 @@ class App extends Component {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div className="App">
-          <Navigation />
-          <Routes />
+            <Navigation />
+            <Routes />
         </div>
       </MuiThemeProvider>
     )

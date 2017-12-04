@@ -11,8 +11,8 @@ export default class ApiClient {
     this.host = process.env.NODE_ENV === 'production'
       ? 'https://taller-huntress.codaisseur.cloud'
       : (host || 'http://localhost:3030')
-this.options = { ...this.defaultOptions, ...options }
-}
+    this.options = { ...this.defaultOptions, ...options }
+    }
 
 
   // Authenticate and store the token
